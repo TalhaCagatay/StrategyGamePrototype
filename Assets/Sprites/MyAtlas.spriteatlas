@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MyAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: c207dabf009767f4baa64d29dabcedd7, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 273bae516b4a8a14ea68cbd76f74de06, type: 3}
+  - {fileID: 21300000, guid: 80bd9f91b1d64354c9faea8144381ad2, type: 3}
+  - {fileID: 21300000, guid: 7df049c1b11c20c4d88dfb75c77affcb, type: 3}
+  - {fileID: 21300000, guid: 73b06402a7cb081429c7f6fd68a23be1, type: 3}
+  - {fileID: 21300000, guid: b588ea63c15944546abc7346f8b0c372, type: 3}
+  - {fileID: 21300000, guid: f96febb3b66f2ef4684fdc920bde469a, type: 3}
+  - {fileID: 21300000, guid: 70a8dc049655c1548a9bababdb01a06d, type: 3}
+  - {fileID: 21300000, guid: f6be7a371dbd60546916b399406292ca, type: 3}
+  - {fileID: 21300000, guid: ee71c447aec27e5488fb315e99855224, type: 3}
+  - {fileID: 21300000, guid: a7582b77c65646c4e8a71fe0f1a10ea1, type: 3}
+  - {fileID: 21300000, guid: 9f2a59f9dc730614896aad0dca2da728, type: 3}
+  - {fileID: 21300000, guid: 80e3179af52dd924990461fb5ec9e61e, type: 3}
+  - {fileID: 21300000, guid: 3bd671bb1daee494fac686606db63132, type: 3}
+  - {fileID: 21300000, guid: 920cc6dc1ece1064db51a9b85571b4ec, type: 3}
+  - {fileID: 21300000, guid: f97d68bee2b2b98468ae9662312e4b0e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 9SliceBG
+  - Archer Tower Front
+  - Castle
+  - Knight Post Front
+  - Castle Tower Front
+  - MouseSelection9SliceImage
+  - BuildGround
+  - Castle Tower Back
+  - Archer Tower Back
+  - Tribal House Back
+  - Villager House Back
+  - Attacking_000
+  - Villager House Front
+  - Tribal House Front
+  - Knight Post Back
+  m_Tag: MyAtlas
+  m_IsVariant: 0
