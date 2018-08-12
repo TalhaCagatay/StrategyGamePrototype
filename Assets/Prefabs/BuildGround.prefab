@@ -51,7 +51,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7, y: 7}
+  m_Size: {x: 8, y: 8}
   m_EdgeRadius: 0
 --- !u!212 &212822950441506524
 SpriteRenderer:
@@ -114,6 +114,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 61.7815, y: -68}
+  m_AnchoredPosition: {x: 3.487078, y: -1.2271568}
   m_SizeDelta: {x: 95.563, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

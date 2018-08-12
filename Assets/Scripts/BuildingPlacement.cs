@@ -9,7 +9,7 @@ public class BuildingPlacement : MonoBehaviour {
     // -- Seçili Bina Daha Önceden Yerleştirilmiş Bir Binanın Üzerine Geldiğinde Arkaplan Rengini Kırmızı Yapıyor -- //
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Placed") || collision.CompareTag("Soldier"))
+        if (collision.CompareTag("Placed") || (collision.CompareTag("Soldier") && gameObject.tag == "Building"))
         {
             canPlace = false;
             myBG.color = new Color32(255, 0, 0, 255);
