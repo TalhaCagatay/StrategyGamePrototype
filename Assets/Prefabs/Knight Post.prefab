@@ -7,22 +7,23 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
+  m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1039784172002792}
-  m_IsPrefabAsset: 1
+  m_IsPrefabParent: 0
 --- !u!1 &1039784172002792
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
+  serializedVersion: 5
   m_Component:
   - component: {fileID: 4699958585745716}
   - component: {fileID: 50264648004675424}
   - component: {fileID: 61868605578807510}
   - component: {fileID: 114209988409062046}
-  - component: {fileID: 114507411365732012}
+  - component: {fileID: 114964023763628052}
   m_Layer: 8
   m_Name: Knight Post
   m_TagString: Building
@@ -33,9 +34,9 @@ GameObject:
 --- !u!1 &1116692176311712
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
+  serializedVersion: 5
   m_Component:
   - component: {fileID: 4957308040564370}
   - component: {fileID: 212856996220097718}
@@ -49,9 +50,9 @@ GameObject:
 --- !u!1 &1970891058044774
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
+  serializedVersion: 5
   m_Component:
   - component: {fileID: 4256850664532676}
   - component: {fileID: 212185637231580916}
@@ -65,7 +66,7 @@ GameObject:
 --- !u!4 &4256850664532676
 Transform:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1970891058044774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -78,7 +79,7 @@ Transform:
 --- !u!4 &4699958585745716
 Transform:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1039784172002792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -93,7 +94,7 @@ Transform:
 --- !u!4 &4957308040564370
 Transform:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1116692176311712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -107,7 +108,7 @@ Transform:
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1039784172002792}
   m_BodyType: 1
@@ -126,7 +127,7 @@ Rigidbody2D:
 --- !u!61 &61868605578807510
 BoxCollider2D:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1039784172002792}
   m_Enabled: 1
@@ -151,7 +152,7 @@ BoxCollider2D:
 --- !u!114 &114209988409062046
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1039784172002792}
   m_Enabled: 1
@@ -161,24 +162,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myBG: {fileID: 212185637231580916}
   canPlace: 1
---- !u!114 &114507411365732012
+--- !u!114 &114964023763628052
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1039784172002792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ac1846714f0784e8b8386a8828d255, type: 3}
+  m_Script: {fileID: 11500000, guid: 8361be472fc802f4e8fe7a01291190d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myInfo: 
   myProduction: {fileID: 0}
   mySpawnPoint: {fileID: 0}
 --- !u!212 &212185637231580916
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1970891058044774}
   m_Enabled: 1
@@ -220,11 +220,10 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!212 &212856996220097718
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1116692176311712}
   m_Enabled: 1
@@ -266,4 +265,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0

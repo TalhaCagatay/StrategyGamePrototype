@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class GameInfoManager : MonoBehaviour {
+public class GameInfoManager : MonoBehaviour
+{
 
     #region Variables
-    private MyInfo myInfo;
-
     public GameObject currentlySelected;
 
     [SerializeField]
@@ -16,9 +13,6 @@ public class GameInfoManager : MonoBehaviour {
 
     [SerializeField]
     private TMP_Text buildingName;
-
-    [SerializeField]
-    private SpriteRenderer unitSprite;
 
     [SerializeField]
     private Image buildImage;
@@ -33,47 +27,55 @@ public class GameInfoManager : MonoBehaviour {
         // -- Fareden Attığımız Raycast İle Çarptığı Placed Etiketli Binaları Kontrol Ederek Onların Bilgilerini Information Panelindeki Gerekli Yerlere Atıyoruz. -- //
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, 100, myMask);
-            if (hit != null && hit.collider != null && hit.transform.tag == "Placed")
+            GetInformation();
+        }
+    }
+
+    private void GetInformation()
+    {
+        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, 100, myMask);
+        if (hit != null && hit.collider != null && hit.transform.tag == "Placed")
+        {
+            //GetComponentlar optimize edilebilir.
+            buildImage.sprite = hit.transform.GetComponent<ICommonBuilding>().BuildingImage.sprite;
+            if (hit.transform.GetComponent<IProductionInterface>() != null)
             {
-                //GetComponentlar optimize edilebilir.
-                buildImage.sprite = hit.transform.GetComponentInChildren<SpriteRenderer>().sprite;
-                if (hit.transform.GetComponent<MyInfo>())
+                //Seçili binanın bilgilerini alıp information panelinde gerekli yerlere atıyoruz.
+                if (hit.transform.GetComponent<IProductionInterface>() != null)
                 {
-                    //Seçili binanın bilgilerini alıp information panelinde gerekli yerlere atıyoruz.
-                    productionImage.sprite = unitSprite.sprite;
-                    buildingName.text = hit.transform.GetComponent<MyInfo>().myInfo;
-                    if (hit.transform.GetComponent<MyInfo>().myProduction)
-                        productionImage.sprite = hit.transform.GetComponent<MyInfo>().myProduction.GetComponent<SpriteRenderer>().sprite;
-                    else
-                        productionImage.sprite = null;
+                    productionImage.sprite = hit.transform.GetComponent<IProductionInterface>().MyProductionImage.sprite;
                 }
+                buildingName.text = hit.transform.GetComponent<ICommonBuilding>().BuildingName;
+                if (hit.transform.GetComponent<IProductionInterface>().MyProductionObject)
+                    productionImage.sprite = hit.transform.GetComponent<IProductionInterface>().MyProductionImage.sprite;
+                else
+                    productionImage.sprite = null;
+            }
 
-                // -- Önceden Seçilmiş Binanın Arkaplan Rengine Erişip Rengini Tekrardan Yeşil Yapıyoruz. -- //
-                if (currentlySelected)
-                    currentlySelected.GetComponent<BuildingPlacement>().myBG.color = new Color32(0, 255, 0, 255);
+            // -- Önceden Seçilmiş Binanın Arkaplan Rengine Erişip Rengini Tekrardan Yeşil Yapıyoruz. -- //
+            if (currentlySelected)
+                currentlySelected.GetComponent<BuildingPlacement>().myBG.color = new Color32(0, 255, 0, 255);
 
-                // -- Seçilen Binayı currentlySelected Değişkenine Atıyoruz. -- //
+            // -- Seçilen Binayı currentlySelected Değişkenine Atıyoruz. -- //
+            if(hit.transform.tag == "Placed")
                 currentlySelected = hit.transform.gameObject;
 
-                // -- Yeni Seçilen Binanın Arkaplan Rengine Erişip Rengini Mavi Yapıyoruz. -- //
-                hit.transform.GetComponent<BuildingPlacement>().myBG.color = new Color32(0, 0, 255, 255);
-            }
+            // -- Yeni Seçilen Binanın Arkaplan Rengine Erişip Rengini Mavi Yapıyoruz. -- //
+            hit.transform.GetComponent<BuildingPlacement>().myBG.color = new Color32(0, 0, 255, 255);
+        }
 
-            else
+        else
+        {
+            //Seçili binayı seçmeyi bırakıyoruz.
+            if (currentlySelected)
             {
-                //Seçili binayı seçmeyi bırakıyoruz.
-                if (currentlySelected)
-                {
-                    currentlySelected.GetComponent<BuildingPlacement>().myBG.color = new Color32(0, 255, 0, 255);
-                    buildingName.text = "Bina Adi";
-                    buildImage.sprite = null;
-                    productionImage.sprite = null;
-                    currentlySelected = null;
-                }
+                currentlySelected.GetComponent<BuildingPlacement>().myBG.color = new Color32(0, 255, 0, 255);
+                buildingName.text = "Bina Adi";
+                buildImage.sprite = null;
+                productionImage.sprite = null;
+                currentlySelected = null;
             }
-
         }
     }
 }
