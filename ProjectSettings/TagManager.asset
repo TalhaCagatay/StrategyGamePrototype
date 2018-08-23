@@ -9,7 +9,7 @@ TagManager:
   - Placed
   - BottomSide
   - Soldier
-  - Boundary
+  - UnUsableArea
   layers:
   - Default
   - TransparentFX

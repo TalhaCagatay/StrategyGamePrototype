@@ -14,6 +14,10 @@ public class BuildingPlacement : MonoBehaviour {
             canPlace = false;
             myBG.color = new Color32(255, 0, 0, 255);
         }
+        if (collision.CompareTag("BuildArea") && gameObject.tag == "Placed")
+        {
+            collision.tag = "UnUsableArea";
+        }
     }
     // -- Seçili Bina Daha Önceden Yerleştirilmiş Bir Binanın Üzerinden Çıktığında Arkaplan Rengini Tekrardan Yeşil Yapıyor -- //
     private void OnTriggerExit2D(Collider2D collision)

@@ -48,9 +48,14 @@ public class ProductiveBuilding : AbstractInfoManager,ICommonBuilding,IProductio
 
     public ProductiveBuilding(string name) : base(name) // Polymorphism'e örnek olması için yazıldı.
     {
-        Debug.Log(name); // Base sınıfın name'i
+        Debug.Log(base.name);
 
         name = "Üretim Yapıyorum";
         Debug.Log(name); // Değiştirip kullanılan name
+    }
+
+    private void Start()
+    {
+        var obj = new ProductiveBuilding("Üretim yapıyorum");
     }
 }

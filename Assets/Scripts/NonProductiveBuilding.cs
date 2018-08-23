@@ -17,10 +17,15 @@ public class NonProductiveBuilding : AbstractInfoManager, ICommonBuilding { // �
 
     public NonProductiveBuilding(string name) : base(name) // Polymorphism'e örnek olması için yazıldı.
     {
-        Debug.Log(name); // Base sınıfın name'i
+        Debug.Log(base.name);
 
         name = "Üretim yapmıyorum";
         Debug.Log(name); // Değiştirip kullanılan name
+    }
+
+    private void Start()
+    {
+        var obj = new NonProductiveBuilding("Üretim yapmıyorum");
     }
 
 }
