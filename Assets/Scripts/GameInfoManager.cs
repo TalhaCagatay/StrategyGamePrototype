@@ -49,9 +49,9 @@ public class GameInfoManager : MonoBehaviour
                 buildingName.text = hit.transform.GetComponent<ICommonBuilding>().BuildingName;
                 if (hit.transform.GetComponent<IProductionInterface>().MyProductionObject)
                     productionImage.sprite = hit.transform.GetComponent<IProductionInterface>().MyProductionImage.sprite;
-                else
-                    productionImage.sprite = null;
             }
+            else
+                    productionImage.sprite = null;
 
             // -- Önceden Seçilmiş Binanın Arkaplan Rengine Erişip Rengini Tekrardan Yeşil Yapıyoruz. -- //
             if (currentlySelected)
